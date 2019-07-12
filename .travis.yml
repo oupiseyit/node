@@ -12,7 +12,8 @@ before_deploy:
 deploy:
   skip_cleanup: true
   provider: script
-  script: docker push mannydesigns/node
+  script: 
+    - docker push mannydesigns/node
   on:
     branch: master
 
