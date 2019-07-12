@@ -10,7 +10,7 @@ before_deploy:
   - docker login -u oupisey -p @Gmail.com123
 
 deploy:
-  privider: script
+  provider: script
   script: docker push mannydesigns/node
   on:
     branch: master
