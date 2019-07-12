@@ -8,11 +8,11 @@ script:
 
 before_deploy:
   - sudo docker login -u oupisey -p @Gmail.com123
+  - sudo docker tag mannydesigns/node oupisey/node
 
 deploy:
   provider: script
-  skip_cleanup: true
-  script: sudo docker push mannydesigns/node
+  script: sudo docker push oupisey/node
   on:
     branch: master
 
