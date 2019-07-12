@@ -10,10 +10,9 @@ before_deploy:
   - docker login -u oupisey -p @Gmail.com123
 
 deploy:
-  skip_cleanup: true
   provider: script
-  script: 
-    - docker push mannydesigns/node
+  skip_cleanup: true
+  script: docker push mannydesigns/node
   on:
     branch: master
 
