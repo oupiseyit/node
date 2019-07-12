@@ -7,12 +7,12 @@ script:
   - docker images mannydesigns/node
 
 before_deploy:
-  - docker login -u oupisey -p @Gmail.com123 docker.io
+  - sudo docker login -u oupisey -p @Gmail.com123
 
 deploy:
   provider: script
   skip_cleanup: true
-  script: docker push mannydesigns/node:0.0.1
+  script: sudo docker push mannydesigns/node
   on:
     branch: master
 
